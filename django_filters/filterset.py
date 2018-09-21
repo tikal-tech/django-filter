@@ -212,7 +212,7 @@ class BaseFilterSet(object):
                 # else STRICTNESS.IGNORE...  ignoring
 
             # start with all the results and filter from there
-            qs = self.queryset
+            qs = self.queryset.all()
             # if qs is a Manager, start a Queryset
             if isinstance(self.queryset, models.Manager):
                 qs = qs.all()
@@ -228,7 +228,7 @@ class BaseFilterSet(object):
                     qs = qs._next_is_sticky()
                     qs = filter_.filter(qs, value)
 
-            self._qs = qs.all()
+            self._qs = qs
 
         return self._qs
 
