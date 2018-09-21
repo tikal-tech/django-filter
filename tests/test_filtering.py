@@ -1896,7 +1896,7 @@ class MiscFilterSetTests(TestCase):
         f = F({'account': 'jdoe'}, queryset=qs)
         result = f.qs
         self.assertNotEqual(qs, result)
-        qs.all.return_value.filter.assert_called_with(username__exact='jdoe')
+        qs._next_is_sticky.return_value.filter.assert_called_with(username__exact='jdoe')
 
     def test_filtering_with_multiple_filters(self):
         class F(FilterSet):

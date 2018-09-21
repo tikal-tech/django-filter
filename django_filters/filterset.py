@@ -212,19 +212,18 @@ class BaseFilterSet(object):
                 # else STRICTNESS.IGNORE...  ignoring
 
             # start with all the results and filter from there
-            qs = self.queryset.all()
-            # if qs is a Manager, start a Queryset
+            qs = self.queryset
+            # if qs is a Manager, call all to start a Queryset
             if isinstance(self.queryset, models.Manager):
                 qs = qs.all()
 
             for name, filter_ in six.iteritems(self.filters):
                 value = self.form.cleaned_data.get(name)
-
+                # undocumented method to treat the current and next filter
+                # as a single filter.
+                # https://blog.ionelmc.ro/2014/05/10/django-sticky-queryset-filters/
+                # https://github.com/carltongibson/django-filter/pull/753
                 if value is not None:  # valid & clean data
-                    # undocumented method to treat the current and next filter
-                    # as a single filter.
-                    # https://blog.ionelmc.ro/2014/05/10/django-sticky-queryset-filters/
-                    # https://github.com/carltongibson/django-filter/pull/753
                     qs = qs._next_is_sticky()
                     qs = filter_.filter(qs, value)
 
