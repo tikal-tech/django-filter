@@ -1,5 +1,5 @@
-Django Filter
-=============
+Django Filter EX
+================
 
 Django-filter is a reusable Django application allowing users to declaratively
 add dynamic ``QuerySet`` filtering from URL parameters.
@@ -19,9 +19,13 @@ Full documentation on `read the docs`_.
 Requirements
 ------------
 
-* **Python**: 2.7, 3.4, 3.5, 3.6
-* **Django**: 1.8, 1.10, 1.11
-* **DRF**: 3.7
+* **Python**: 2.7, 3.6
+* **Django**: 1.11
+* **DRF**: 3.7, 3.8
+
+Django filter EX is a fork from Django filter 1.1.0 witch contains a small patch to improve performance of 
+the default filterset on chained filters. It passes all the tests and works for my use-case.
+
 
 Installation
 ------------
