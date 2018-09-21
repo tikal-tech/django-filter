@@ -228,7 +228,7 @@ class BaseFilterSet(object):
                     qs = qs._next_is_sticky()
                     qs = filter_.filter(qs, value)
 
-            self._qs = qs
+            self._qs = qs.all()
 
         return self._qs
 
