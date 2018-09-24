@@ -6,14 +6,14 @@ add dynamic ``QuerySet`` filtering from URL parameters.
 
 Full documentation on `read the docs`_.
 
-.. image:: https://travis-ci.org/carltongibson/django-filter.svg?branch=master
-    :target: https://travis-ci.org/carltongibson/django-filter
+.. image:: https://travis-ci.com/tikal-tech/django-filter.svg?branch=master
+    :target: https://travis-ci.com/tikal-tech/django-filter
 
-.. image:: https://codecov.io/gh/carltongibson/django-filter/branch/develop/graph/badge.svg
-    :target: https://codecov.io/gh/carltongibson/django-filter
+.. image:: https://codecov.io/gh/tikal-tech/django-filter/branch/develop/graph/badge.svg
+    :target: https://codecov.io/gh/tikal-tech/django-filter
 
-.. image:: https://badge.fury.io/py/django-filter.svg
-    :target: http://badge.fury.io/py/django-filter
+.. image:: https://badge.fury.io/py/django-filter-ex.svg
+    :target: http://badge.fury.io/py/django-filter-ex
 
 
 Requirements
