@@ -9,7 +9,7 @@ Full documentation on `read the docs`_.
 .. image:: https://travis-ci.com/tikal-tech/django-filter.svg?branch=master
     :target: https://travis-ci.com/tikal-tech/django-filter
 
-.. image:: https://codecov.io/gh/tikal-tech/django-filter/branch/develop/graph/badge.svg
+.. image:: https://codecov.io/gh/tikal-tech/django-filter/branch/py2-compat/graph/badge.svg
     :target: https://codecov.io/gh/tikal-tech/django-filter
 
 .. image:: https://badge.fury.io/py/django-filter-ex.svg
